@@ -115,6 +115,21 @@ def _link_jupyter_server_extension(serverapp):
     config_dirs = jupyter_paths + [serverapp.config_dir]
     nbserver_extensions = get_nbserver_extensions(config_dirs)
 
+    # Link all extensions found in the old locations for
+    # notebook server extensions.
+    for name, enabled in nbserver_extensions.items():
+        # If the extension is already enabled in the manager, i.e.
+        # because it was discovered already by Jupyter Server
+        # through its jupyter_server_config, then don't re-enable here.
+        if name not in manager.extensions:
+            successful = manager.add_extension(name, enabled=enabled)
+            if successful:
+                logger.info(
+                    "{name} | extension was found and enabled by notebook_shim. "
+                    "Consider moving the extension to Jupyter Server's "
+                    "extension paths.".format(name=name)
+                )
+                manager.link_extension(name)
 
 def _load_jupyter_server_extension(serverapp):
     # Patch the config service manager to find the
