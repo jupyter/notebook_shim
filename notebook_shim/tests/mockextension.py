@@ -11,7 +11,7 @@ from notebook_shim import shim
 def _jupyter_server_extension_points():
     return [
         {
-            "module": "notebook_shim.tests.shim.mockextension",
+            "module": "notebook_shim.tests.mockextension",
             "app": MockExtensionApp
         }
     ]
