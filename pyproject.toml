@@ -14,6 +14,9 @@ testpaths = [
 [tool.jupyter-releaser]
 skip = ["check-links"]
 
+[tool.jupyter-releaser.options]
+post-version-spec = "dev"
+
 [tool.tbump.version]
 current = "0.2.0.dev0"
 regex = '''

@@ -9,38 +9,19 @@ from notebook_shim import shim
 
 
 @pytest.fixture
-def extapp_log():
-    """An io stream with the NotebookApp's logging output"""
-    stream = io.StringIO()
-    return stream
-
-
-@pytest.fixture(autouse=True)
-def extapp_logcapture(monkeypatch, extapp_log):
-    """"""
-    @default('log')
-    def _log_default(self):
-        """Start logging for this application.
-        The default is to log to stderr using a StreamHandler, if no default
-        handler already exists.  The log level starts at logging.WARN, but this
-        can be adjusted by setting the ``log_level`` attribute.
-        """
-        log = super(self.__class__, self)._log_default()
-        _log_handler = logging.StreamHandler(extapp_log)
-        _log_formatter = self._log_formatter_cls(
-            fmt=self.log_format,
-            datefmt=self.log_datefmt
-        )
-        _log_handler.setFormatter(_log_formatter)
-        log.addHandler(_log_handler)
-        return log
-
-    monkeypatch.setattr(MockExtensionApp, '_log_default', _log_default)
-    return _log_default
+def read_app_logs(capsys):
+    """Fixture that returns a callable to read
+    the current output from the application's logs
+    that was printed to sys.stderr.
+    """
+    def _inner():
+        captured = capsys.readouterr()
+        return captured.err
+    return _inner
 
 
 @pytest.fixture
-def jp_server_config():
+def jp_server_config(capsys):
     return {
         "ServerApp": {
             "jpserver_extensions": {
@@ -77,13 +58,13 @@ def list_test_params(param_input):
     ])
 )
 def test_EXTAPP_AND_NBAPP_SHIM_MSG(
+    read_app_logs,
     extensionapp,
-    extapp_log,
     jp_argv,
     trait_name,
     trait_value
 ):
-    log = extapp_log.getvalue()
+    log = read_app_logs()
     # Verify a shim warning appeared.
     log_msg = shim.EXTAPP_AND_NBAPP_SHIM_MSG(trait_name, 'MockExtensionApp')
     assert log_msg in log
@@ -99,13 +80,13 @@ def test_EXTAPP_AND_NBAPP_SHIM_MSG(
     ])
 )
 def test_EXTAPP_AND_SVAPP_SHIM_MSG(
+    read_app_logs,
     extensionapp,
-    extapp_log,
     jp_argv,
     trait_name,
     trait_value
 ):
-    log = extapp_log.getvalue()
+    log = read_app_logs()
     # Verify a shim warning appeared.
     log_msg = shim.EXTAPP_AND_SVAPP_SHIM_MSG(trait_name, 'MockExtensionApp')
     assert log_msg in log
@@ -123,13 +104,13 @@ def test_EXTAPP_AND_SVAPP_SHIM_MSG(
     ])
 )
 def test_NOT_EXTAPP_NBAPP_AND_SVAPP_SHIM_MSG(
+    read_app_logs,
     extensionapp,
-    extapp_log,
     jp_argv,
     trait_name,
     trait_value
 ):
-    log = extapp_log.getvalue()
+    log = read_app_logs()
     # Verify a shim warning appeared.
     log_msg = shim.NOT_EXTAPP_NBAPP_AND_SVAPP_SHIM_MSG(trait_name, 'MockExtensionApp')
     assert log_msg in log
@@ -144,13 +125,13 @@ def test_NOT_EXTAPP_NBAPP_AND_SVAPP_SHIM_MSG(
     ])
 )
 def test_EXTAPP_TO_SVAPP_SHIM_MSG(
+    read_app_logs,
     extensionapp,
-    extapp_log,
     jp_argv,
     trait_name,
     trait_value
 ):
-    log = extapp_log.getvalue()
+    log = read_app_logs()
     # Verify a shim warning appeared.
     log_msg = shim.EXTAPP_TO_SVAPP_SHIM_MSG(trait_name, 'MockExtensionApp')
     assert log_msg in log
@@ -166,13 +147,13 @@ def test_EXTAPP_TO_SVAPP_SHIM_MSG(
     ])
 )
 def test_EXTAPP_TO_NBAPP_SHIM_MSG(
+    read_app_logs,
     extensionapp,
-    extapp_log,
     jp_argv,
     trait_name,
     trait_value
 ):
-    log = extapp_log.getvalue()
+    log = read_app_logs()
     # Verify a shim warning appeared.
     log_msg = shim.EXTAPP_TO_NBAPP_SHIM_MSG(trait_name, 'MockExtensionApp')
     assert log_msg in log
