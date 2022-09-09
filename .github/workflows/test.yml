@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      
+
       - name: Base Setup
         uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
 
@@ -33,4 +33,4 @@ jobs:
           pip check
       - name: Test with pytest
         run: |
-          pytest -vv --cov=notebook_shim notebook_shim --cov-report term-missing:skip-covered
+          python -m pytest -vv --cov=notebook_shim notebook_shim --cov-report term-missing:skip-covered
