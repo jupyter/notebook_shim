@@ -4,7 +4,7 @@
 
 ## 0.2.0
 
-([Full Changelog](https://github.com/jupyter/notebook_shim/compare/v0.1.0...1853b2e5fcab1de80fd8803d04dc95662d39903a))
+([Full Changelog](https://github.com/jupyter/notebook_shim/compare/v0.1.0...9eb8fe4cc6cd410bf92c5af9cb330284f0d004c2))
 
 ### Enhancements made
 
@@ -17,9 +17,9 @@
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyter/notebook_shim/graphs/contributors?from=2022-02-10&to=2022-09-09&type=c))
+([GitHub contributors page for this release](https://github.com/jupyter/notebook_shim/graphs/contributors?from=2022-02-10&to=2022-09-12&type=c))
 
-[@Zsailer](https://github.com/search?q=repo%3Ajupyter%2Fnotebook_shim+involves%3AZsailer+updated%3A2022-02-10..2022-09-09&type=Issues)
+[@Zsailer](https://github.com/search?q=repo%3Ajupyter%2Fnotebook_shim+involves%3AZsailer+updated%3A2022-02-10..2022-09-12&type=Issues)
 
 <!-- <END NEW CHANGELOG ENTRY> -->
 
