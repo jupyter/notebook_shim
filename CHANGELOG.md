@@ -12,8 +12,6 @@
 
 ### Maintenance and upkeep improvements
 
-- Revert "Publish 0.2.0" [#20](https://github.com/jupyter/notebook_shim/pull/20) ([@jtpio](https://github.com/jtpio))
-- Bump version back to 0.1.0 [#18](https://github.com/jupyter/notebook_shim/pull/18) ([@blink1073](https://github.com/blink1073))
 - remove dev version [#15](https://github.com/jupyter/notebook_shim/pull/15) ([@Zsailer](https://github.com/Zsailer))
 - switch to hatch build backend [#14](https://github.com/jupyter/notebook_shim/pull/14) ([@Zsailer](https://github.com/Zsailer))
 
