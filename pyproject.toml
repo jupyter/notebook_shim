@@ -31,6 +31,9 @@ dependencies = [
   "jupyter_server>=1.8,<3"
 ]
 
+[tool.hatch.build.targets.wheel.shared-data]
+"jupyter_server_config.d/notebook_shim.json" = "etc/jupyter/jupyter_server_config.d/notebook_shim.json"
+
 [project.optional-dependencies]
 test = [
     "pytest",
