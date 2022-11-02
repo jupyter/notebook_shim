@@ -2,6 +2,22 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.2.1
+
+([Full Changelog](https://github.com/jupyter/notebook_shim/compare/v0.2.0...b72af7411fa41115c3025a95f261e10bf0221fb0))
+
+### Bugs fixed
+
+- Add config file [#23](https://github.com/jupyter/notebook_shim/pull/23) ([@dleen](https://github.com/dleen))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/notebook_shim/graphs/contributors?from=2022-10-17&to=2022-11-02&type=c))
+
+[@dleen](https://github.com/search?q=repo%3Ajupyter%2Fnotebook_shim+involves%3Adleen+updated%3A2022-10-17..2022-11-02&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.2.0
 
 ([Full Changelog](https://github.com/jupyter/notebook_shim/compare/v0.1.0...4e4228d7bb2d2e04cc204db3de7f2f567d65c38a))
@@ -20,8 +36,6 @@
 ([GitHub contributors page for this release](https://github.com/jupyter/notebook_shim/graphs/contributors?from=2022-02-10&to=2022-10-17&type=c))
 
 [@blink1073](https://github.com/search?q=repo%3Ajupyter%2Fnotebook_shim+involves%3Ablink1073+updated%3A2022-02-10..2022-10-17&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyter%2Fnotebook_shim+involves%3Ajtpio+updated%3A2022-02-10..2022-10-17&type=Issues) | [@Zsailer](https://github.com/search?q=repo%3Ajupyter%2Fnotebook_shim+involves%3AZsailer+updated%3A2022-02-10..2022-10-17&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.1.0
 
