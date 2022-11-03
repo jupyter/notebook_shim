@@ -2,6 +2,27 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.2.2
+
+([Full Changelog](https://github.com/jupyter/notebook_shim/compare/v0.2.0...e1f1219888d9bfa69fc0e1f130f6f1bcf3825fcb))
+
+### Bugs fixed
+
+- Fixes #7 [#24](https://github.com/jupyter/notebook_shim/pull/24) ([@dleen](https://github.com/dleen))
+- Add config file [#23](https://github.com/jupyter/notebook_shim/pull/23) ([@dleen](https://github.com/dleen))
+
+### Maintenance and upkeep improvements
+
+- add releaser v2 workflows [#25](https://github.com/jupyter/notebook_shim/pull/25) ([@Zsailer](https://github.com/Zsailer))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/notebook_shim/graphs/contributors?from=2022-10-17&to=2022-11-03&type=c))
+
+[@dleen](https://github.com/search?q=repo%3Ajupyter%2Fnotebook_shim+involves%3Adleen+updated%3A2022-10-17..2022-11-03&type=Issues) | [@Zsailer](https://github.com/search?q=repo%3Ajupyter%2Fnotebook_shim+involves%3AZsailer+updated%3A2022-10-17..2022-11-03&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.2.1
 
 ([Full Changelog](https://github.com/jupyter/notebook_shim/compare/v0.2.0...b72af7411fa41115c3025a95f261e10bf0221fb0))
@@ -15,8 +36,6 @@
 ([GitHub contributors page for this release](https://github.com/jupyter/notebook_shim/graphs/contributors?from=2022-10-17&to=2022-11-02&type=c))
 
 [@dleen](https://github.com/search?q=repo%3Ajupyter%2Fnotebook_shim+involves%3Adleen+updated%3A2022-10-17..2022-11-02&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.2.0
 

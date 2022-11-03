@@ -42,11 +42,12 @@ test = [
 ]
 
 
+
 [tool.hatch.version]
 path = "notebook_shim/_version.py"
 
 [tool.tbump.version]
-current = "0.2.1"
+current = "0.2.2"
 regex = '''
   (?P<major>\d+)\.(?P<minor>\d+)\.(?P<patch>\d+)
   ((?P<channel>a|b|rc|.dev)(?P<release>\d+))?
