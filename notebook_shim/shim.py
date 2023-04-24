@@ -102,7 +102,7 @@ def EXTAPP_TO_NBAPP_SHIM_MSG(trait_name, extapp_name): return (
 
 # A tuple of traits that shouldn't be shimmed or throw any
 # warnings of any kind.
-IGNORED_TRAITS = ("open_browser", "log_level", "log_format", "default_url")
+IGNORED_TRAITS = ("open_browser", "log_level", "log_format", "default_url", "show_banner")
 
 
 class NotebookConfigShimMixin:
