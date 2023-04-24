@@ -39,6 +39,7 @@ test = [
     "pytest",
     "pytest-tornasync",
     "pytest-console-scripts",
+    "pytest_jupyter"
 ]
 
 
