@@ -2,6 +2,22 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.2.4
+
+([Full Changelog](https://github.com/jupyter/notebook_shim/compare/v0.2.3...eb748573d2af505c6846fbf2597ec56447c0d6e8))
+
+### Maintenance and upkeep improvements
+
+- Fix extension discovery warning [#31](https://github.com/jupyter/notebook_shim/pull/31) ([@Zsailer](https://github.com/Zsailer))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/notebook_shim/graphs/contributors?from=2023-04-24&to=2024-02-14&type=c))
+
+[@Zsailer](https://github.com/search?q=repo%3Ajupyter%2Fnotebook_shim+involves%3AZsailer+updated%3A2023-04-24..2024-02-14&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.2.3
 
 ([Full Changelog](https://github.com/jupyter/notebook_shim/compare/v0.2.2...bb84e6475a757b6299cb07ec3ce027a8c57d052e))
@@ -15,8 +31,6 @@
 ([GitHub contributors page for this release](https://github.com/jupyter/notebook_shim/graphs/contributors?from=2022-11-03&to=2023-04-24&type=c))
 
 [@echarles](https://github.com/search?q=repo%3Ajupyter%2Fnotebook_shim+involves%3Aecharles+updated%3A2022-11-03..2023-04-24&type=Issues) | [@Zsailer](https://github.com/search?q=repo%3Ajupyter%2Fnotebook_shim+involves%3AZsailer+updated%3A2022-11-03..2023-04-24&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.2.2
 
