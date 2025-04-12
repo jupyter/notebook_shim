@@ -48,8 +48,6 @@ test = [
 
 
 
-
-
 [tool.hatch.version]
 path = "notebook_shim/_version.py"
 
@@ -84,6 +82,7 @@ default = ""
 ignore = ["tbump.toml", ".*", "conftest.py"]
 
 [tool.pytest.ini_options]
+minversion = "7"
 norecursedirs = ["confs"]
 testpaths = [
     "notebook_shim/tests"
