@@ -1,10 +1,6 @@
 
-import io
-import logging
 import pytest
 
-from traitlets import default
-from .mockextension import MockExtensionApp
 from notebook_shim import shim
 
 

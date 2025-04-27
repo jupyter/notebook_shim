@@ -31,6 +31,10 @@ dependencies = [
   "jupyter_server>=1.8,<3"
 ]
 
+[project.urls]
+Homepage = "https://jupyter.org"
+Source = "https://github.com/jupyter/notebook_shim"
+
 [tool.hatch.build.targets.wheel.shared-data]
 "jupyter_server_config.d/notebook_shim.json" = "etc/jupyter/jupyter_server_config.d/notebook_shim.json"
 
@@ -41,8 +45,6 @@ test = [
     "pytest-console-scripts",
     "pytest_jupyter"
 ]
-
-
 
 
 
@@ -80,6 +82,7 @@ default = ""
 ignore = ["tbump.toml", ".*", "conftest.py"]
 
 [tool.pytest.ini_options]
+minversion = "7"
 norecursedirs = ["confs"]
 testpaths = [
     "notebook_shim/tests"
